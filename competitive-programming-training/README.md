@@ -60,6 +60,7 @@ competitive-programming-training/
 
 ## 环境
 
-- 编译标准：**C++17**（`-O2 -Wall -Wextra`）
-- 本机目前**没有可用的 g++**（旧的 GCC 3.4.5 随 GUIDE 一起移到了 `D:\Git\_local\GUIDE`），
-  需要安装 MinGW-w64 并加入 PATH，`tasks.json` 才能工作。详见 `docs/workflow.md`。
+- 编译标准：**C++17**；F5 调试使用 `-O0 -g -Wall -Wextra`，CPH 测样例使用 `-O2 -Wall -Wextra`。
+- 本机 MinGW-w64 位于 `C:/Users/13014/mingw64`，已配置 g++ 和 GDB。
+- 在 VS Code 中直接打开本目录 `competitive-programming-training`，所有子目录共用根目录的 `.vscode` 配置。
+- 运行和调试操作见 [训练工作流](docs/workflow.md)。换电脑时需修改 `.vscode` 中的编译器、调试器路径。

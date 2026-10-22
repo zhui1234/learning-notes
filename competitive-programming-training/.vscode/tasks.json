@@ -2,18 +2,19 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "process",
             "label": "build",
-            "command": "g++",
+            "command": "C:/Users/13014/mingw64/bin/g++.exe",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
                 "-std=c++17",
-                "-O2",
+                "-DLOCAL",
+                "-O0",
                 "-Wall",
                 "-Wextra",
                 "-o",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
+                "${fileDirname}/main.exe",
                 "${file}"
             ],
             "options": {
@@ -24,12 +25,12 @@
                 "isDefault": true
             },
             "problemMatcher": ["$gcc"],
-            "detail": "编译当前文件为 C++17 可执行文件"
+            "detail": "编译当前 C++ 文件为同目录的 main.exe（含调试信息，关闭优化）"
         },
         {
-            "type": "shell",
+            "type": "process",
             "label": "run",
-            "command": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+            "command": "${fileDirname}/main.exe",
             "dependsOn": "build",
             "options": {
                 "cwd": "${fileDirname}"
