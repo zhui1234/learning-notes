@@ -50,7 +50,15 @@ competitive-programming-training/
 3. 在 `index.csv` 追加（或重新生成）索引行。
 4. 值得复盘的题，补一个 `solution.md`（模板见 `templates/markdown/solution.md`）。
 
-## 索引
+## 专题与单独练习
+
+- [双指针与尺取法：学习路径、17 道题及进度表](problem-lists/two-pointers/README.md)
+- 临时选做的 CF 题按 `problems/codeforces/practice/<contestId><题号>/main.cpp` 保存，例如 `practice/279B/main.cpp`；QOJ 题按 `problems/qoj/practice/<题号>/main.cpp` 保存。
+- 洛谷专题题按 `problems/luogu/<英文专题名>/<题号>/main.cpp` 保存，例如 `two-pointers/P1638/main.cpp`。
+- 已在比赛目录存过的题保留原位置，专题题单引用实际路径。同题只存一份代码；需要复盘时再使用 [单题笔记模板](templates/markdown/practice-solution.md)。
+- 专题进度记录在题单；实际通过并存档后，再登记到总索引。
+
+## 总索引字段
 
 `index.csv` 列：`date, platform, contest, problem, name, rating, tags, status, submissions, path, url`
 

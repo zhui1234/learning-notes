@@ -3,7 +3,6 @@
 ## 1. 赛前 / 平时
 
 ```powershell
-# 新建一场比赛（示例：Codeforces Round 1090 Div.4）
 $d = "problems/codeforces/1090_Div4"
 New-Item -ItemType Directory -Force $d | Out-Null
 1..7 | ForEach-Object {
