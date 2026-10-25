@@ -15,7 +15,7 @@ void solve()
         num++;
         if(i==j || w[i]+w[j]>m)
             j--;
-        if(w[i]+w[j]<=m)
+        else
             i++,j--;
     }
     cout << num;

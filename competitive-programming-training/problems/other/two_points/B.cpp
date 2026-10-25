@@ -2,21 +2,33 @@
 using namespace std;
 
 using i64 = long long;
+int n,m,w[30010];
 
-void solve() {}
+void solve()
+{
+    cin>>n>>m;
+    for(int i=1;i<=n;i++)cin>>w[i];
+    sort(w+1,w+n+1);
+    int i=1,j=n,num=0;
+    while(i<j)
+    {
+        if(w[i]+m>w[j])
+
+    }
+    cout << num;
+}
 
 int main()
 {
 #ifdef LOCAL
     freopen("in.txt", "r", stdin);
-    freopen("out.txt", "w", stdout);
+    //freopen("out.txt", "w", stdout);
 #endif
 
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
     int T = 1;
-    cin>>T;
     while (T--) solve();
     return 0;
 }
