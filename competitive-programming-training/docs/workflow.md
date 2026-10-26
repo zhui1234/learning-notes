@@ -9,6 +9,7 @@ New-Item -ItemType Directory -Force $d | Out-Null
     $letter = [char](64 + $_)
     Copy-Item templates/cpp/main.cpp "$d/$letter.cpp"
 }
+Copy-Item templates/cpp/in.txt "$d/in.txt"
 ```
 
 ## 2. 赛中
