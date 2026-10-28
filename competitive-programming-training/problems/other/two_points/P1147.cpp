@@ -2,20 +2,23 @@
 using namespace std;
 
 using i64 = long long;
-int n,m,w[30010];
+int n;
 
 void solve()
 {
-    cin>>n>>m;
-    for(int i=1;i<=n;i++)cin>>w[i];
-    sort(w+1,w+n+1);
-    int i=1,j=n,num=0;
-    while(i<j)
+    cin>>n;
+    int l=1,r=4;
+    while(r*(r+1)<2*n)r++;
+    do
     {
-        if(w[i]+m>w[j])
-
-    }
-    cout << num;
+        if((l+r)*(r-l+1)==2*n)
+        {
+            cout<<l<<' '<<r<<endl;
+            l++;
+        }
+        while((l+r)*(r-l+1)<2*n)r++;
+        while((l+r)*(r-l+1)>2*n)l++;
+    }while(2*r-1<=n);
 }
 
 int main()
