@@ -25,5 +25,6 @@
   },
   "terminal.integrated.env.windows": {
     "PYTHONPATH": "${workspaceFolder}/.grader"
-  }
+  },
+  "python.terminal.useEnvFile": true
 }
