@@ -24,6 +24,10 @@ def product(n, term):
     162
     """
     "*** YOUR CODE HERE ***"
+    res=1
+    for i in range(1,n+1):
+        res = res * term(i)
+    return res
 
 
 def accumulate(fuse, start, n, term):
@@ -46,6 +50,10 @@ def accumulate(fuse, start, n, term):
     19
     """
     "*** YOUR CODE HERE ***"
+    res = start
+    for i in range(1,n+1):
+        res = fuse(res,term(i))
+    return res
 
 
 def summation_using_accumulate(n, term):
@@ -60,7 +68,7 @@ def summation_using_accumulate(n, term):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(summation_using_accumulate)).body[0].body]
     ['Expr', 'Return']
     """
-    return ____
+    return accumulate(add,0,n,term)
 
 
 def product_using_accumulate(n, term):
@@ -75,7 +83,7 @@ def product_using_accumulate(n, term):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(product_using_accumulate)).body[0].body]
     ['Expr', 'Return']
     """
-    return ____
+    return accumulate(mul,1,n,term)
 
 
 def make_repeater(f, n):
@@ -92,7 +100,9 @@ def make_repeater(f, n):
     390625
     """
     "*** YOUR CODE HERE ***"
-
+    if n==0:
+        return identity
+    return lambda x: f(make_repeater(f,n-1)(x))
 
 def composite_identity(f, g):
     """Return a function with one parameter x that returns True if f(g(x)) is
@@ -111,7 +121,7 @@ def composite_identity(f, g):
     True
     """
     "*** YOUR CODE HERE ***"
-
+    return lambda x: f(g(x)) == g(f(x))
 
 def zero(f):
     return lambda x: x
