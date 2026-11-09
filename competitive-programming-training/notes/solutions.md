@@ -17,7 +17,7 @@
 
 - 为什么失败或卡住：
 推规律部分太容易卡住,对字母不敏感,需要列出具体的数字;
-(a + b ) % mod = ((a % mod) * (b ^ -1 % mod)) % mod;
+(a / b ) % mod = ((a % mod) * (b ^ -1 % mod)) % mod;
 需要把1<<32写成(long long)1<<32;
 mod小于int范围,变量可以用int,但是运算中要转为long long
 
