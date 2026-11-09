@@ -21,7 +21,7 @@ int f(i64 x)
     if(x==2)return 3;
     if(x==3)return 2;
     int logx=Log(x);
-    return min((i64)f(x-(1LL<<logx)+2)+logx+1,((1LL<<(logx+1))-x)%mod+logx)%mod;
+    return min((i64)f(x-(1LL<<logx)+2)+logx+1,((1LL<<(logx+1))-x)+logx)%mod;
 }
 void solve()
 {
