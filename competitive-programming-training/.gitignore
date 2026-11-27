@@ -8,7 +8,7 @@
 *.ilk
 *.stackdump
 
-# 本地运行的输出；in.txt 保留，方便保存和复现样例
+in.txt
 out.txt
 
 # ---------- IDE / 编辑器 ----------
